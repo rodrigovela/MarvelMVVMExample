@@ -33,6 +33,20 @@
 			remoteGlobalIDString = 97500FFA2559B733004468F1;
 			remoteInfo = MarvelMVVMExample;
 		};
+		975010C22559D4D2004468F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 975010BD2559D4D1004468F1 /* MarvelMVVM.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 975010A32559D4D1004468F1;
+			remoteInfo = MarvelMVVM;
+		};
+		975010C42559D4D2004468F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 975010BD2559D4D1004468F1 /* MarvelMVVM.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 975010AC2559D4D1004468F1;
+			remoteInfo = MarvelMVVMTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +65,7 @@
 		9750101F2559B73A004468F1 /* MarvelMVVMExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelMVVMExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		975010232559B73A004468F1 /* MarvelMVVMExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelMVVMExampleUITests.swift; sourceTree = "<group>"; };
 		975010252559B73A004468F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		975010BD2559D4D1004468F1 /* MarvelMVVM.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MarvelMVVM.xcodeproj; path = MarvelMVVM/MarvelMVVM.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +96,7 @@
 		97500FF22559B733004468F1 = {
 			isa = PBXGroup;
 			children = (
+				975010BD2559D4D1004468F1 /* MarvelMVVM.xcodeproj */,
 				97500FFD2559B733004468F1 /* MarvelMVVMExample */,
 				975010172559B73A004468F1 /* MarvelMVVMExampleTests */,
 				975010222559B73A004468F1 /* MarvelMVVMExampleUITests */,
@@ -129,6 +145,15 @@
 				975010252559B73A004468F1 /* Info.plist */,
 			);
 			path = MarvelMVVMExampleUITests;
+			sourceTree = "<group>";
+		};
+		975010BE2559D4D1004468F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				975010C32559D4D2004468F1 /* MarvelMVVM.framework */,
+				975010C52559D4D2004468F1 /* MarvelMVVMTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +246,12 @@
 			mainGroup = 97500FF22559B733004468F1;
 			productRefGroup = 97500FFC2559B733004468F1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 975010BE2559D4D1004468F1 /* Products */;
+					ProjectRef = 975010BD2559D4D1004468F1 /* MarvelMVVM.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				97500FFA2559B733004468F1 /* MarvelMVVMExample */,
@@ -229,6 +260,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		975010C32559D4D2004468F1 /* MarvelMVVM.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MarvelMVVM.framework;
+			remoteRef = 975010C22559D4D2004468F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		975010C52559D4D2004468F1 /* MarvelMVVMTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MarvelMVVMTests.xctest;
+			remoteRef = 975010C42559D4D2004468F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		97500FF92559B733004468F1 /* Resources */ = {
