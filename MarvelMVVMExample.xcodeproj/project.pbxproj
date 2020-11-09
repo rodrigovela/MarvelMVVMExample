@@ -16,6 +16,11 @@
 		9750100E2559B73A004468F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9750100C2559B73A004468F1 /* LaunchScreen.storyboard */; };
 		975010192559B73A004468F1 /* MarvelMVVMExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975010182559B73A004468F1 /* MarvelMVVMExampleTests.swift */; };
 		975010242559B73A004468F1 /* MarvelMVVMExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975010232559B73A004468F1 /* MarvelMVVMExampleUITests.swift */; };
+		F2A318A42559DA2200797E57 /* HeroImageModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A318982559DA2100797E57 /* HeroImageModule.swift */; };
+		F2A318A52559DA2200797E57 /* HeroesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A318992559DA2100797E57 /* HeroesTableViewCell.swift */; };
+		F2A318A62559DA2200797E57 /* ImageViewWithGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A3189A2559DA2100797E57 /* ImageViewWithGradient.swift */; };
+		F2A318A72559DA2200797E57 /* HeroImageModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A3189B2559DA2100797E57 /* HeroImageModule.xib */; };
+		F2A318A82559DA2200797E57 /* HeroesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A3189C2559DA2100797E57 /* HeroesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,11 @@
 		975010232559B73A004468F1 /* MarvelMVVMExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelMVVMExampleUITests.swift; sourceTree = "<group>"; };
 		975010252559B73A004468F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		975010BD2559D4D1004468F1 /* MarvelMVVM.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MarvelMVVM.xcodeproj; path = MarvelMVVM/MarvelMVVM.xcodeproj; sourceTree = "<group>"; };
+		F2A318982559DA2100797E57 /* HeroImageModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroImageModule.swift; sourceTree = "<group>"; };
+		F2A318992559DA2100797E57 /* HeroesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroesTableViewCell.swift; sourceTree = "<group>"; };
+		F2A3189A2559DA2100797E57 /* ImageViewWithGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewWithGradient.swift; sourceTree = "<group>"; };
+		F2A3189B2559DA2100797E57 /* HeroImageModule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroImageModule.xib; sourceTree = "<group>"; };
+		F2A3189C2559DA2100797E57 /* HeroesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,11 @@
 		97500FFD2559B733004468F1 /* MarvelMVVMExample */ = {
 			isa = PBXGroup;
 			children = (
+				F2A318A02559DA2100797E57 /* Models */,
+				F2A318962559DA2100797E57 /* Presentation */,
+				F2A318A12559DA2200797E57 /* Services */,
+				F2A318A32559DA2200797E57 /* UseCases */,
+				F2A318A22559DA2200797E57 /* ViewModels */,
 				97500FFE2559B733004468F1 /* AppDelegate.swift */,
 				975010002559B733004468F1 /* SceneDelegate.swift */,
 				975010022559B733004468F1 /* ViewController.swift */,
@@ -154,6 +169,62 @@
 				975010C52559D4D2004468F1 /* MarvelMVVMTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F2A318962559DA2100797E57 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F2A318972559DA2100797E57 /* Views */,
+				F2A3189D2559DA2100797E57 /* Entities */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F2A318972559DA2100797E57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2A318982559DA2100797E57 /* HeroImageModule.swift */,
+				F2A318992559DA2100797E57 /* HeroesTableViewCell.swift */,
+				F2A3189A2559DA2100797E57 /* ImageViewWithGradient.swift */,
+				F2A3189B2559DA2100797E57 /* HeroImageModule.xib */,
+				F2A3189C2559DA2100797E57 /* HeroesTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2A3189D2559DA2100797E57 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F2A318A02559DA2100797E57 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F2A318A12559DA2200797E57 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F2A318A22559DA2200797E57 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F2A318A32559DA2200797E57 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,8 +355,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9750100E2559B73A004468F1 /* LaunchScreen.storyboard in Resources */,
+				F2A318A82559DA2200797E57 /* HeroesTableViewCell.xib in Resources */,
 				9750100B2559B73A004468F1 /* Assets.xcassets in Resources */,
 				975010062559B733004468F1 /* Main.storyboard in Resources */,
+				F2A318A72559DA2200797E57 /* HeroImageModule.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +384,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				975010032559B733004468F1 /* ViewController.swift in Sources */,
+				F2A318A52559DA2200797E57 /* HeroesTableViewCell.swift in Sources */,
+				F2A318A42559DA2200797E57 /* HeroImageModule.swift in Sources */,
+				F2A318A62559DA2200797E57 /* ImageViewWithGradient.swift in Sources */,
 				97500FFF2559B733004468F1 /* AppDelegate.swift in Sources */,
 				975010012559B733004468F1 /* SceneDelegate.swift in Sources */,
 				975010092559B733004468F1 /* MarvelMVVMExample.xcdatamodeld in Sources */,

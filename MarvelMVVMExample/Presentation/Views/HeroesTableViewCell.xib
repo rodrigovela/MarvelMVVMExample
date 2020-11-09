@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="209" id="KGk-i7-Jjw" customClass="HeroesTableViewCell" customModule="RampUpProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="209"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="208.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pnC-f1-wT5" customClass="ImageViewWithGradient" customModule="RampUpProject" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="209"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="209" id="qtt-ti-kbz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uet-HD-6st">
+                        <rect key="frame" x="16" y="136" width="288" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbV-VS-Pa7">
+                        <rect key="frame" x="16" y="177" width="288" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pnC-f1-wT5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="22I-D6-x7H"/>
+                    <constraint firstItem="VbV-VS-Pa7" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="O6o-Se-vb8"/>
+                    <constraint firstItem="Uet-HD-6st" firstAttribute="leading" secondItem="VbV-VS-Pa7" secondAttribute="leading" id="Pgh-Te-ENo"/>
+                    <constraint firstItem="VbV-VS-Pa7" firstAttribute="top" secondItem="Uet-HD-6st" secondAttribute="bottom" constant="20" id="TcK-y0-BEH"/>
+                    <constraint firstItem="Uet-HD-6st" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="V0c-UA-1Fx"/>
+                    <constraint firstItem="pnC-f1-wT5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hcy-Q0-aWd"/>
+                    <constraint firstAttribute="trailing" secondItem="pnC-f1-wT5" secondAttribute="trailing" id="lIX-KD-geX"/>
+                    <constraint firstItem="pnC-f1-wT5" firstAttribute="centerX" secondItem="VbV-VS-Pa7" secondAttribute="centerX" id="nYj-Tn-7dz"/>
+                    <constraint firstItem="pnC-f1-wT5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="slg-7s-Ret"/>
+                    <constraint firstItem="pnC-f1-wT5" firstAttribute="centerX" secondItem="Uet-HD-6st" secondAttribute="centerX" id="vW5-26-oXH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="heroeDescriptionLabel" destination="VbV-VS-Pa7" id="eRZ-JW-yjM"/>
+                <outlet property="heroeImage" destination="pnC-f1-wT5" id="9tH-jS-dfx"/>
+                <outlet property="heroeNameLabel" destination="Uet-HD-6st" id="v0v-vP-sbI"/>
+            </connections>
+            <point key="canvasLocation" x="88" y="191.5"/>
+        </tableViewCell>
+    </objects>
+</document>
