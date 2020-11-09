@@ -10,6 +10,11 @@
 		975010AD2559D4D1004468F1 /* MarvelMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975010A32559D4D1004468F1 /* MarvelMVVM.framework */; };
 		975010B22559D4D1004468F1 /* MarvelMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975010B12559D4D1004468F1 /* MarvelMVVMTests.swift */; };
 		975010B42559D4D1004468F1 /* MarvelMVVM.h in Headers */ = {isa = PBXBuildFile; fileRef = 975010A62559D4D1004468F1 /* MarvelMVVM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2A318B82559DDA900797E57 /* HeroImageModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A318B12559DDA800797E57 /* HeroImageModule.swift */; };
+		F2A318B92559DDA900797E57 /* HeroesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A318B22559DDA800797E57 /* HeroesTableViewCell.swift */; };
+		F2A318BA2559DDA900797E57 /* ImageViewWithGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A318B32559DDA800797E57 /* ImageViewWithGradient.swift */; };
+		F2A318BB2559DDA900797E57 /* HeroImageModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A318B42559DDA800797E57 /* HeroImageModule.xib */; };
+		F2A318BC2559DDA900797E57 /* HeroesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A318B52559DDA800797E57 /* HeroesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		975010AC2559D4D1004468F1 /* MarvelMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		975010B12559D4D1004468F1 /* MarvelMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelMVVMTests.swift; sourceTree = "<group>"; };
 		975010B32559D4D1004468F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2A318B12559DDA800797E57 /* HeroImageModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroImageModule.swift; sourceTree = "<group>"; };
+		F2A318B22559DDA800797E57 /* HeroesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroesTableViewCell.swift; sourceTree = "<group>"; };
+		F2A318B32559DDA800797E57 /* ImageViewWithGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewWithGradient.swift; sourceTree = "<group>"; };
+		F2A318B42559DDA800797E57 /* HeroImageModule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroImageModule.xib; sourceTree = "<group>"; };
+		F2A318B52559DDA800797E57 /* HeroesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,11 @@
 		975010A52559D4D1004468F1 /* MarvelMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				F2A318AC2559DDA800797E57 /* Models */,
+				F2A318AF2559DDA800797E57 /* Presentation */,
+				F2A318B72559DDA900797E57 /* Services */,
+				F2A318AD2559DDA800797E57 /* UseCases */,
+				F2A318AE2559DDA800797E57 /* ViewModels */,
 				975010A62559D4D1004468F1 /* MarvelMVVM.h */,
 				975010A72559D4D1004468F1 /* Info.plist */,
 			);
@@ -84,6 +99,62 @@
 				975010B32559D4D1004468F1 /* Info.plist */,
 			);
 			path = MarvelMVVMTests;
+			sourceTree = "<group>";
+		};
+		F2A318AC2559DDA800797E57 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F2A318AD2559DDA800797E57 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		F2A318AE2559DDA800797E57 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F2A318AF2559DDA800797E57 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F2A318B02559DDA800797E57 /* Views */,
+				F2A318B62559DDA800797E57 /* Entities */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F2A318B02559DDA800797E57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2A318B12559DDA800797E57 /* HeroImageModule.swift */,
+				F2A318B22559DDA800797E57 /* HeroesTableViewCell.swift */,
+				F2A318B32559DDA800797E57 /* ImageViewWithGradient.swift */,
+				F2A318B42559DDA800797E57 /* HeroImageModule.xib */,
+				F2A318B52559DDA800797E57 /* HeroesTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2A318B62559DDA800797E57 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F2A318B72559DDA900797E57 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +249,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A318BB2559DDA900797E57 /* HeroImageModule.xib in Resources */,
+				F2A318BC2559DDA900797E57 /* HeroesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A318B82559DDA900797E57 /* HeroImageModule.swift in Sources */,
+				F2A318B92559DDA900797E57 /* HeroesTableViewCell.swift in Sources */,
+				F2A318BA2559DDA900797E57 /* ImageViewWithGradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +462,7 @@
 		975010BB2559D4D1004468F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MarvelMVVMTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,6 +480,7 @@
 		975010BC2559D4D1004468F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MarvelMVVMTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
