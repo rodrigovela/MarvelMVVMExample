@@ -18,9 +18,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yb-Jy-lNh">
                                 <rect key="frame" x="186" y="433" width="42" height="30"/>
                                 <state key="normal" title="Open "/>
-                                <connections>
-                                    <segue destination="iCD-54-LUW" kind="presentation" modalPresentationStyle="fullScreen" id="UOP-ak-y6D"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -30,20 +27,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="openButton" destination="5yb-Jy-lNh" id="MCn-r3-jXd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="141" y="139"/>
-        </scene>
-        <!--HeroesList-->
-        <scene sceneID="88C-9a-HVY">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HeroesList" bundleIdentifier="com.rodrigo.velazquez.MarvelMVVM" id="iCD-54-LUW" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="eXd-0y-CQV"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GCb-Hp-JEB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="749" y="139"/>
         </scene>
     </scenes>
 </document>

@@ -12,6 +12,12 @@ protocol GetCharacters {
     func execute(completion: @escaping ([Character]?) -> Void)
 }
 
+extension Interaction {
+    static func inject() -> GetCharacters {
+        return GetCharactersAdapter()
+    }
+}
+
 final class GetCharactersAdapter: UseCase {
     struct Dependencies {
         var fetchCharactersService: FetchCharactersService = inject()

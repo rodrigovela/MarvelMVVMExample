@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EB2942E5-CB7A-45F7-8364-A22D9B3BAECE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5557435-633D-4DE7-A193-0186BE19AD4A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarvelMVVM/MarvelMVVM/Presentation/Views/ViewProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "heroViewController()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D5557435-633D-4DE7-A193-0186BE19AD4A - ebe501762ebe5097"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MarvelMVVM.ViewProviderAdapter.heroViewController() -&gt; __C.UIViewController"
+                  moduleName = "MarvelMVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodrigo.velazquez/Documents/MarvelMVVMExample/MarvelMVVM/MarvelMVVM/Presentation/Views/ViewProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "D5557435-633D-4DE7-A193-0186BE19AD4A - b041a50fbe4d2722"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSCoder) -&gt; Swift.Optional&lt;MarvelMVVM.HeroListViewController&gt; in MarvelMVVM.ViewProviderAdapter.heroViewController() -&gt; __C.UIViewController"
+                  moduleName = "MarvelMVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodrigo.velazquez/Documents/MarvelMVVMExample/MarvelMVVM/MarvelMVVM/Presentation/Views/ViewProvider.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F0993352-F546-4A1C-AB8C-DB0395DDF080"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarvelMVVM/MarvelMVVM/Services/FetchCharactersService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "execute(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F0993352-F546-4A1C-AB8C-DB0395DDF080 - ccfd05c02cda18d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MarvelMVVM.FetchCharactersServiceAdapter.execute(completion: (MarvelMVVM.DataWrapper&lt;Swift.Array&lt;MarvelMVVM.Character&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MarvelMVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodrigo.velazquez/Documents/MarvelMVVMExample/MarvelMVVM/MarvelMVVM/Services/FetchCharactersService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "465">
+               </Location>
+               <Location
+                  uuid = "F0993352-F546-4A1C-AB8C-DB0395DDF080 - e57895016a44a147"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MarvelMVVM.HTTPResponse&lt;MarvelMVVM.DataWrapper&lt;Swift.Array&lt;MarvelMVVM.Character&gt;&gt;&gt;) -&gt; () in MarvelMVVM.FetchCharactersServiceAdapter.execute(completion: (MarvelMVVM.DataWrapper&lt;Swift.Array&lt;MarvelMVVM.Character&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MarvelMVVM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodrigo.velazquez/Documents/MarvelMVVMExample/MarvelMVVM/MarvelMVVM/Services/FetchCharactersService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D6B57F5-8912-40EA-9723-1389DDA04DD4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarvelMVVM/MarvelMVVM/Services/FetchCharactersService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "execute(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76162CDA-AC88-49F0-BB2A-0E4E13BF45D6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarvelMVVM/MarvelMVVM/HTTPClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "createURLRequest(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

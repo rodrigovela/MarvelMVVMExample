@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import MarvelMVVM
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
+    @IBOutlet weak var openButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        openButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
 
-
+    @objc func buttonTapped(_ sender: UIButton) {
+        let vc = MarvelMVVMGatewayAdapter.instance.mainViewController()
+        self.present(vc, animated: true, completion: nil)
+    }
 }
 

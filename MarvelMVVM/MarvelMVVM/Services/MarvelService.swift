@@ -29,6 +29,10 @@ final class MarvelService {
         return httpClient
     }()
     
+    fileprivate lazy var imageClient: ImageClientProtocol = {
+        return ImageClient(urlSession: .shared)
+    }()
+    
     private init(environment: Environment = .defaulted) {
         self.environment = environment
     }
@@ -43,5 +47,9 @@ extension MarvelService: HeaderProvider {
 extension InternalService {
     static func inject() -> HTTPClient {
         return MarvelService.instance.httpClient
+    }
+    
+    static func inject() -> ImageClientProtocol {
+        return MarvelService.instance.imageClient
     }
 }
