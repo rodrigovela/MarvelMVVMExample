@@ -8,7 +8,13 @@
 
 import UIKit
 
-class HeroesTableViewCell: UITableViewCell {
+struct HeroesTableViewCellViewModel {
+    var image: String
+    var heroName: String
+    var heroDescription: String
+}
+
+final class HeroesTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlets
     @IBOutlet weak var heroeImage: ImageViewWithGradient!
@@ -34,10 +40,10 @@ class HeroesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    public func setUpHeroCell(image: String, heroName: String, heroDescription: String) {
-        heroeNameLabel.text = heroName
-        heroeDescriptionLabel.text = heroDescription
-        setImage(url: image)
+    public func setUpHeroCell(viewModel: HeroesTableViewCellViewModel) {
+        heroeNameLabel.text = viewModel.heroName
+        heroeDescriptionLabel.text = viewModel.heroDescription
+        setImage(url: viewModel.image)
     }
     
     private func setImage(url: String?) {
