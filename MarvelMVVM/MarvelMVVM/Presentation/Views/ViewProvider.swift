@@ -17,7 +17,7 @@ final class ViewProviderAdapter: ViewModel, ViewProvider {
     private let storyboard: UIStoryboard = .init(name: "HeroesList", bundle: Bundle(for: ViewProviderAdapter.self))
     
     struct Dependencies {
-        var heroListViewModel: HeroListViewModel = inject()
+        var heroListViewModel: HeroListViewModelProtocol = inject()
     }
     
     let dependencies: Dependencies

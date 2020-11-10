@@ -18,7 +18,7 @@ class HeroListViewController: UIViewController {
     // MARK: - Variables and constants
     
     struct Constants {
-        static let heroesTableViewCellIdentifier: String = "HeroesCell"
+        static let heroesTableViewCellIdentifier: String = "HeroesTableViewCell"
         static let estimatedTableRowHeight: CGFloat = 300
         static let heroesTableViewCellNibIdentifier: String = "HeroImageModule"
         static let heroesTableViewCell: String = "HeroesTableViewCell"
@@ -32,18 +32,22 @@ class HeroListViewController: UIViewController {
         return (heroesTableView.contentSize.height > screenHeight) ? heroesTableView.contentSize.height : screenHeight
     }
     
-    private let viewModel: HeroListViewModel
+    private let viewModel: HeroListViewModelProtocol
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewModel.sceneDidLoad()
         configureTableView()
+        self.viewModel.heroes.bind { [weak self] _ in
+            self?.heroesTableView.reloadData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    init?(viewModel: HeroListViewModel, coder: NSCoder){
+    init?(viewModel: HeroListViewModelProtocol, coder: NSCoder){
         self.viewModel = viewModel
         super.init(coder: coder)
     }
@@ -59,13 +63,12 @@ extension HeroListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel.heroes.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: HeroesTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.heroesTableViewCellIdentifier, for: indexPath) as! HeroesTableViewCell
-        //let model = presenter.models[indexPath.row]
-        //cell.setUpHeroCell(image: model.heroImage ?? "", heroName: model.heroName ?? "", heroDescription: model.heroDescription ?? "")
+        cell.setUpHeroCell(viewModel: viewModel.heroes.value[indexPath.row])
         return cell
     }
 }
@@ -83,8 +86,8 @@ extension HeroListViewController {
     }
     
     func registerCells() {
-        heroesTableView.register(UINib.init(nibName: Constants.heroesTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.heroesTableViewCellIdentifier)
-        heroesTableView.register(UINib.init(nibName: Constants.heroesTableViewCellNibIdentifier, bundle: nil), forCellReuseIdentifier: Constants.heroesTableViewCellNibIdentifier)
+        heroesTableView.register(UINib.init(nibName: Constants.heroesTableViewCell, bundle: Bundle(for: ViewProviderAdapter.self)), forCellReuseIdentifier: Constants.heroesTableViewCellIdentifier)
+        heroesTableView.register(UINib.init(nibName: Constants.heroesTableViewCellNibIdentifier, bundle: Bundle(for: ViewProviderAdapter.self)), forCellReuseIdentifier: Constants.heroesTableViewCellNibIdentifier)
     }
 }
 

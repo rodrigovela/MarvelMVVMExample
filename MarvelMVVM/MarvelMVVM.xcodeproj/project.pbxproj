@@ -20,6 +20,7 @@
 		978742DA255A478300A34E8D /* HeroListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978742D9255A478300A34E8D /* HeroListViewModel.swift */; };
 		978742E0255B1A3700A34E8D /* Interaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978742DF255B1A3700A34E8D /* Interaction.swift */; };
 		978742E2255B1B5200A34E8D /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978742E1255B1B5200A34E8D /* ViewProvider.swift */; };
+		978742E4255B30E400A34E8D /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978742E3255B30E400A34E8D /* Observable.swift */; };
 		97E9C4E12559DFC60002C5D4 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E9C4E02559DFC60002C5D4 /* HTTPClient.swift */; };
 		97E9C4E62559EED40002C5D4 /* MarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E9C4E52559EED40002C5D4 /* MarvelService.swift */; };
 		97E9C4E82559F4F10002C5D4 /* MarvelCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E9C4E72559F4F10002C5D4 /* MarvelCharacters.swift */; };
@@ -61,6 +62,7 @@
 		978742D9255A478300A34E8D /* HeroListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewModel.swift; sourceTree = "<group>"; };
 		978742DF255B1A3700A34E8D /* Interaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interaction.swift; sourceTree = "<group>"; };
 		978742E1255B1B5200A34E8D /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
+		978742E3255B30E400A34E8D /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		97E9C4E02559DFC60002C5D4 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HTTPClient.swift; path = MarvelMVVM/HTTPClient.swift; sourceTree = SOURCE_ROOT; };
 		97E9C4E52559EED40002C5D4 /* MarvelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelService.swift; sourceTree = "<group>"; };
 		97E9C4E72559F4F10002C5D4 /* MarvelCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacters.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				978742C0255A088400A34E8D /* Character.swift */,
+				978742E3255B30E400A34E8D /* Observable.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				978742E4255B30E400A34E8D /* Observable.swift in Sources */,
 				978742BF255A071500A34E8D /* DataWrapper.swift in Sources */,
 				978742E0255B1A3700A34E8D /* Interaction.swift in Sources */,
 				97E9C4EA2559F9900002C5D4 /* MarvelHTTPRequest.swift in Sources */,

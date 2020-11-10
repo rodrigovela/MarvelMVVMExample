@@ -9,9 +9,6 @@
 import Foundation
 
 struct MarvelCharacters: HTTPRequest, MarvelHTTPRequest {
-    struct APIKey {
-        static let key = ""
-    }
     typealias Response = DataWrapper<[Character]>
     struct Body: Codable { }
     
