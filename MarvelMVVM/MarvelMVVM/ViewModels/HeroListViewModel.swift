@@ -8,9 +8,9 @@
 
 import Foundation
 
-final class HeroListViewModel {
+final class HeroListViewModel: Interaction {
     struct Dependencies {
-        var fetchCharactersService: GetCharacters = GetCharactersAdapter()
+        var fetchCharactersService: GetCharacters = inject()
     }
     
     private let dependencies: Dependencies
@@ -22,5 +22,15 @@ final class HeroListViewModel {
     func getCharacters() {
         self.dependencies.fetchCharactersService.execute { [weak self] characters in
         }
+    }
+}
+
+protocol ViewModel {
+    
+}
+
+extension ViewModel {
+    static func inject() -> HeroListViewModel {
+        return HeroListViewModel()
     }
 }

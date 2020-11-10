@@ -32,12 +32,24 @@ class HeroListViewController: UIViewController {
         return (heroesTableView.contentSize.height > screenHeight) ? heroesTableView.contentSize.height : screenHeight
     }
     
+    private let viewModel: HeroListViewModel
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    init?(viewModel: HeroListViewModel, coder: NSCoder){
+        self.viewModel = viewModel
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("Use init(viewModel:coder:)")
     }
 }
 

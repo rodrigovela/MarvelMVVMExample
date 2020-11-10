@@ -10,7 +10,7 @@
         <!--Hero List View Controller-->
         <scene sceneID="Fvo-tC-wn4">
             <objects>
-                <viewController storyboardIdentifier="HeroesListController" id="1F5-st-agz" customClass="HeroListViewController" customModule="MarvelMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HeroListViewController" id="1F5-st-agz" customClass="HeroListViewController" customModule="MarvelMVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DDC-lH-JOF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,20 +54,11 @@
                     <connections>
                         <outlet property="headerView" destination="lja-bn-xeM" id="Auu-s7-P5r"/>
                         <outlet property="heroesTableView" destination="8fF-56-00Y" id="Hd5-Tv-bhV"/>
-                        <segue destination="9bM-kW-CST" kind="show" identifier="processSegue" id="5yi-dh-NIO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wtu-8s-C98" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="258.62068965517244"/>
-        </scene>
-        <!--HeroesList-->
-        <scene sceneID="8MO-Ke-SHk">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HeroesList" id="9bM-kW-CST" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ioJ-wC-nBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="760.79999999999995" y="257.27136431784112"/>
         </scene>
     </scenes>
 </document>
