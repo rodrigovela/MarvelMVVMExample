@@ -1,5 +1,5 @@
 //
-//  GetCharacters.swift
+//  FetchCharacters.swift
 //  MarvelMVVM
 //
 //  Created by Rodrigo Alejandro Velazquez Alcantara on 09/11/20.
@@ -8,26 +8,33 @@
 
 import Foundation
 
-protocol GetCharacters {
+protocol FetchCharactersService {
     func execute(completion: @escaping (MarvelCharacters.Response) -> Void)
 }
 
 extension UseCase {
-    static func inject() -> GetCharacters {
-        return GetCharactersAdapter()
+    static func inject() -> FetchCharactersService {
+        return FetchCharactersServiceAdapter()
     }
 }
 
-final class GetCharactersAdapter: InternalService {
+final class FetchCharactersServiceAdapter: InternalService {
+    struct Dependencies {
+        var httpClient: HTTPClient = inject()
+    }
     
-    private let httpClient: HTTPClient
+    private let dependencies: Dependencies
     
-    init(httpClient: HTTPClient = inject()) {
-        self.httpClient = httpClient
+    private var httpClient: HTTPClient {
+        return self.dependencies.httpClient
+    }
+    
+    init(dependencies: Dependencies = .init()) {
+        self.dependencies = dependencies
     }
 }
 
-extension GetCharactersAdapter: GetCharacters {
+extension FetchCharactersServiceAdapter: FetchCharactersService {
     func execute(completion: @escaping (MarvelCharacters.Response) -> Void) {
         let request = MarvelCharacters()
         let mainThreadCompletion = endOnMainThread(completion: completion)

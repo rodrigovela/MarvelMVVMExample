@@ -12,9 +12,7 @@ struct MarvelCharacters: HTTPRequest, MarvelHTTPRequest {
     struct APIKey {
         static let key = ""
     }
-    struct Response: Codable {
-        
-    }
+    typealias Response = DataWrapper<[Character]>
     struct Body: Codable { }
     
     let partialURLpath: String = "/characters"
