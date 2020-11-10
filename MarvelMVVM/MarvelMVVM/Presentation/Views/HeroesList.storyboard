@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1F5-st-agz">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hero List View Controller-->
+        <scene sceneID="Fvo-tC-wn4">
+            <objects>
+                <viewController storyboardIdentifier="HeroesListController" id="1F5-st-agz" customClass="HeroListViewController" customModule="MarvelMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DDC-lH-JOF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8fF-56-00Y">
+                                <rect key="frame" x="0.0" y="20" width="375" height="792"/>
+                                <color key="backgroundColor" red="0.8473454118" green="0.2200087905" blue="0.19199571009999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.8473454118" green="0.2200087905" blue="0.19199571009999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1F5-st-agz" id="5Qs-Sv-RT0"/>
+                                    <outlet property="delegate" destination="1F5-st-agz" id="qrq-Xi-1cO"/>
+                                </connections>
+                            </tableView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lja-bn-xeM" customClass="HeroImageModule" customModule="MarvelMVVM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" identifier="HeroHeaderAccessibilityLabel">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="240" id="5jg-kb-272"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="viewHeightConstraint" destination="5jg-kb-272" id="sfR-nt-T1z"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8473454118" green="0.2200087905" blue="0.19199571009999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8fF-56-00Y" secondAttribute="trailing" id="8KF-tN-Cy9"/>
+                            <constraint firstItem="8fF-56-00Y" firstAttribute="top" secondItem="DDC-lH-JOF" secondAttribute="topMargin" constant="-24" id="9J1-Gb-cSC"/>
+                            <constraint firstItem="8fF-56-00Y" firstAttribute="leading" secondItem="lja-bn-xeM" secondAttribute="leading" id="gqZ-we-f4e"/>
+                            <constraint firstItem="lja-bn-xeM" firstAttribute="top" secondItem="DDC-lH-JOF" secondAttribute="top" id="iAE-XY-QZA"/>
+                            <constraint firstItem="8fF-56-00Y" firstAttribute="trailing" secondItem="lja-bn-xeM" secondAttribute="trailing" id="u8q-jD-wup"/>
+                            <constraint firstAttribute="bottom" secondItem="8fF-56-00Y" secondAttribute="bottom" id="xPX-7U-bst"/>
+                            <constraint firstItem="8fF-56-00Y" firstAttribute="leading" secondItem="DDC-lH-JOF" secondAttribute="leading" id="zrv-IF-6bB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xPc-tE-RwL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KZb-6e-s9m"/>
+                    <connections>
+                        <outlet property="headerView" destination="lja-bn-xeM" id="Auu-s7-P5r"/>
+                        <outlet property="heroesTableView" destination="8fF-56-00Y" id="Hd5-Tv-bhV"/>
+                        <segue destination="9bM-kW-CST" kind="show" identifier="processSegue" id="5yi-dh-NIO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wtu-8s-C98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="258.62068965517244"/>
+        </scene>
+        <!--HeroesList-->
+        <scene sceneID="8MO-Ke-SHk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HeroesList" id="9bM-kW-CST" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ioJ-wC-nBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.79999999999995" y="257.27136431784112"/>
+        </scene>
+    </scenes>
+</document>
