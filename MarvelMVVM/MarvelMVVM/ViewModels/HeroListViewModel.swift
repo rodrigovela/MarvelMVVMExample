@@ -6,7 +6,7 @@
 //  Copyright © 2020 Rodrigo Alejandro Velazquez Alcantara. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 typealias Heroes = Observable<[HeroesTableViewCellViewModel]>
 
@@ -19,6 +19,7 @@ protocol HeroListViewModelProtocol {
 final class HeroListViewModel: Interaction {
     struct Dependencies {
         var fetchCharactersService: GetCharacters = inject()
+        var getCharacterImage: GetCharacterImage = inject()
     }
     
     var heroes: Heroes = .init([])
@@ -33,7 +34,7 @@ final class HeroListViewModel: Interaction {
         self.dependencies.fetchCharactersService.execute { [weak self] characters in
             guard
                 let self = self,
-                let heroes = characters?.compactMap(HeroesTableViewCellViewModel.init(character:))
+                let heroes = characters?.compactMap(self.formatCharacter(_:))
             else { return }
             self.heroes.value = heroes
         }
@@ -46,11 +47,21 @@ extension HeroListViewModel: HeroListViewModelProtocol {
     }
 }
 
-extension HeroesTableViewCellViewModel {
-    init(character: Character) {
-        self.heroName = character.name ?? ""
-        self.heroDescription = character.description ?? ""
-        self.image = character.thumbnail?.path ?? ""
+extension HeroListViewModel {
+    func formatCharacter(_ character: Character) ->  HeroesTableViewCellViewModel {
+        let imageObservable = Observable<UIImage?>(nil)
+        return .init(image: imageObservable,
+                     heroName: character.name ?? "",
+                     heroDescription: character.description ?? "",
+                     onViewWillDisplay: { [weak self] in
+                        guard let self = self else {
+                            return
+                        }
+                        
+                        self.dependencies.getCharacterImage.execute(image: character.thumbnail) { (image) in
+                            imageObservable.value = image
+                        }
+        })
     }
 }
 

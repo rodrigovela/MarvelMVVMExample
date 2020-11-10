@@ -9,9 +9,10 @@
 import UIKit
 
 struct HeroesTableViewCellViewModel {
-    var image: String
+    var image: Observable<UIImage?>
     var heroName: String
     var heroDescription: String
+    var onViewWillDisplay: (() -> Void)?
 }
 
 final class HeroesTableViewCell: UITableViewCell {
@@ -35,6 +36,8 @@ final class HeroesTableViewCell: UITableViewCell {
         
     }
     
+    private var heroThumbnail: Observable<UIImage?> = .init(nil)
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
@@ -43,14 +46,10 @@ final class HeroesTableViewCell: UITableViewCell {
     public func setUpHeroCell(viewModel: HeroesTableViewCellViewModel) {
         heroeNameLabel.text = viewModel.heroName
         heroeDescriptionLabel.text = viewModel.heroDescription
-        setImage(url: viewModel.image)
-    }
-    
-    private func setImage(url: String?) {
-        guard let stringUrl = url, let imageUrl = URL(string: stringUrl) else {
-            return
+        heroThumbnail = viewModel.image
+        heroThumbnail.bind { [weak self] (image) in
+            guard let self = self else { return }
+            self.heroeImage.image = image
         }
-        // set Image from server
-  
     }
 }

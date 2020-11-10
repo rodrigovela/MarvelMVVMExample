@@ -71,6 +71,11 @@ extension HeroListViewController: UITableViewDataSource, UITableViewDelegate {
         cell.setUpHeroCell(viewModel: viewModel.heroes.value[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let model = viewModel.heroes.value[indexPath.row]
+        model.onViewWillDisplay?()
+    }
 }
 
 extension HeroListViewController {
