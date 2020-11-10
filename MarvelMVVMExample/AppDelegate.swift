@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import MarvelMVVM
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

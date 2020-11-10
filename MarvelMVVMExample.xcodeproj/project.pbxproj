@@ -16,6 +16,8 @@
 		9750100E2559B73A004468F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9750100C2559B73A004468F1 /* LaunchScreen.storyboard */; };
 		975010192559B73A004468F1 /* MarvelMVVMExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975010182559B73A004468F1 /* MarvelMVVMExampleTests.swift */; };
 		975010242559B73A004468F1 /* MarvelMVVMExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975010232559B73A004468F1 /* MarvelMVVMExampleUITests.swift */; };
+		978742CB255A3F6800A34E8D /* MarvelMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975010C32559D4D2004468F1 /* MarvelMVVM.framework */; };
+		978742CC255A3F6800A34E8D /* MarvelMVVM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 975010C32559D4D2004468F1 /* MarvelMVVM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		978742CD255A3F6800A34E8D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				978742CC255A3F6800A34E8D /* MarvelMVVM.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		97500FFB2559B733004468F1 /* MarvelMVVMExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelMVVMExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97500FFE2559B733004468F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				978742CB255A3F6800A34E8D /* MarvelMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +118,7 @@
 				975010172559B73A004468F1 /* MarvelMVVMExampleTests */,
 				975010222559B73A004468F1 /* MarvelMVVMExampleUITests */,
 				97500FFC2559B733004468F1 /* Products */,
+				978742C8255A3F6800A34E8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +174,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		978742C8255A3F6800A34E8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +191,7 @@
 				97500FF72559B733004468F1 /* Sources */,
 				97500FF82559B733004468F1 /* Frameworks */,
 				97500FF92559B733004468F1 /* Resources */,
+				978742CD255A3F6800A34E8D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
