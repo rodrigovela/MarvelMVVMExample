@@ -11,7 +11,7 @@ import UIKit
 class HeroImageModule: UIView {
     
     // MARK: - IBOutlets
-    
+    @IBOutlet weak var heroView: UIView!
     @IBOutlet weak var heroImage: UIImageView!
     @IBOutlet weak var blurView: UIVisualEffectView! {
         didSet {
@@ -46,10 +46,10 @@ class HeroImageModule: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        let view = Bundle.main.loadNibNamed(Constants.headerModuleIdentifier, owner: self, options: nil)?[0] as! UIView
-        addSubview(view)
-        view.frame = self.bounds
+        Bundle(for: type(of: self)).loadNibNamed(String(describing: HeroImageModule.self), owner: self, options: nil)
+
+        addSubview(heroView)
+        heroView.frame = self.bounds
     }
     
     override func awakeFromNib() {
@@ -59,8 +59,8 @@ class HeroImageModule: UIView {
     
     func configureUI() {
         titleLabel.text = "Heroes"
-
     }
+    
     func updateSize(offset: CGFloat) {
         viewHeightConstraint.constant = (kMaxOffset - offset > Constants.NavBarHeightSize) ? kMaxOffset - offset : Constants.NavBarHeightSize
         adaptView(size: viewHeightConstraint.constant)

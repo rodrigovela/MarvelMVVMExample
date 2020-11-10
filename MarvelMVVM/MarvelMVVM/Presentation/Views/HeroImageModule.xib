@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Bold.otf">
+            <string>ProximaNova-Bold</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroImageModule" customModule="RampUpProject" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroImageModule" customModule="MarvelMVVM" customModuleProvider="target">
             <connections>
                 <outlet property="blurView" destination="fbs-iP-Xg0" id="iof-aU-fpe"/>
                 <outlet property="heroImage" destination="cIU-2K-k5Q" id="dYM-Fj-BwJ"/>
+                <outlet property="heroView" destination="2eg-02-VvM" id="STo-sa-ecO"/>
                 <outlet property="titleCentetConstraint" destination="KiZ-vk-tp8" id="3y0-4S-MLJ"/>
                 <outlet property="titleLabel" destination="CgA-xb-HeJ" id="eNM-Lg-joK"/>
             </connections>
@@ -84,6 +87,6 @@
         </view>
     </objects>
     <resources>
-        <image name="HeroImage" width="760" height="427"/>
+        <image name="HeroImage" width="760" height="427.5"/>
     </resources>
 </document>
